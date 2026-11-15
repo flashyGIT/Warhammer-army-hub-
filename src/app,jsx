@@ -1,1 +1,34 @@
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ArmyProvider } from "./context/ArmyContext";
+
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Factions from "./pages/Factions";
+import ArmyBuilder from "./pages/ArmyBuilder";
+import Lore from "./pages/Lore";
+import NotFound from "./pages/NotFound";
+
+export default function App() {
+  return (
+    <ArmyProvider>
+      <BrowserRouter>
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/factions" element={<Factions />} />
+          <Route path="/army-builder" element={<ArmyBuilder />} />
+          <Route path="/lore" element={<Lore />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+
+        <footer className="footer">
+          <p>Imperium Archives | Warhammer 40,000 Fan Project</p>
+          <p>Not affiliated with Games Workshop.</p>
+        </footer>
+      </BrowserRouter>
+    </ArmyProvider>
+  );
+}
+
