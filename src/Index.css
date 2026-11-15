@@ -1,0 +1,270 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  color: #eee9df;
+  background: #111214;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #111214;
+}
+
+a {
+  color: #d6a05a;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.header {
+  background: #191a1d;
+  border-bottom: 2px solid #9c2929;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  color: white;
+  font-size: 20px;
+}
+
+.logo span {
+  color: #b93b35;
+}
+
+.header nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  color: #ddd;
+  font-size: 14px;
+}
+
+.header nav a.active {
+  color: #e34b42;
+}
+
+.army-count {
+  border: 1px solid #9c2929;
+  padding: 9px 14px;
+  border-radius: 5px;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 45px 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 46px);
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  background: linear-gradient(135deg, #252020, #151719);
+  border: 1px solid #51302b;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  color: #e0b17b;
+}
+
+.hero p {
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 18px auto;
+}
+
+.eyebrow {
+  color: #d04a42;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.primary-button,
+button {
+  background: #9c2929;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.primary-button:hover,
+button:hover {
+  background: #c13c35;
+}
+
+.stats-grid,
+.faction-grid,
+.unit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.stat-card,
+.faction-card,
+.unit-card,
+.lore-card,
+.army-summary {
+  background: #1d1f22;
+  border: 1px solid #393638;
+  padding: 22px;
+  border-radius: 8px;
+}
+
+.stat-card h2 {
+  color: #d84a42;
+  font-size: 30px;
+}
+
+.content-section {
+  margin-top: 45px;
+}
+
+.faction-card h3,
+.unit-card h3 {
+  color: #e2b47b;
+}
+
+.faction-card p,
+.unit-card p {
+  color: #c0bcb5;
+  line-height: 1.6;
+}
+
+.faction-button {
+  background: #25272a;
+  border: 1px solid #50484a;
+}
+
+.faction-button.active {
+  background: #9c2929;
+}
+
+.unit-type {
+  color: #d45a4e;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.unit-card button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.army-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.roster-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  background: #202225;
+  border-bottom: 1px solid #444;
+}
+
+.remove-button {
+  background: #555;
+}
+
+.lore-card {
+  line-height: 1.8;
+}
+
+.lore-image {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.not-found h1 {
+  color: #c83e36;
+  font-size: 80px;
+}
+
+.footer {
+  background: #191a1d;
+  border-top: 1px solid #70312d;
+  padding: 25px;
+  text-align: center;
+  color: #aaa;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header nav {
+    gap: 14px;
+  }
+
+  .container {
+    width: 92%;
+    padding: 30px 0;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .army-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .roster-item {
+    align-items: flex-start;
+  }
+}
+
